@@ -1,9 +1,9 @@
 {
   "name": "podTestLibrary",
-  "version": "0.1.0",
-  "summary": "A short description of podTestLibrary.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/hehai/podTestLibrary",
+  "version": "1.0.0",
+  "summary": "Testing Private Podspec.",
+  "description": "Testing Private Podspec, Testing Private Podspec.",
+  "homepage": "https://github.com/riversea2015/podTestLibrary",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,48 @@
     "hehai": "hehai682@126.com"
   },
   "source": {
-    "git": "https://github.com/hehai/podTestLibrary.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/riversea2015/podTestLibrary.git",
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "podTestLibrary/Classes/**/*"
+  "frameworks": "UIKit",
+  "subspecs": [
+    {
+      "name": "NetWorkEngine",
+      "source_files": "podTestLibrary/Classes/NetworkEngine/**/*",
+      "public_header_files": "podTestLibrary/Classes/NetworkEngine/**/*.h",
+      "dependencies": {
+        "AFNetworking": [
+          "~> 3.0"
+        ]
+      }
+    },
+    {
+      "name": "DataModel",
+      "source_files": "podTestLibrary/Classes/DataModel/**/*",
+      "public_header_files": "podTestLibrary/Classes/DataModel/**/*.h"
+    },
+    {
+      "name": "CommonTools",
+      "source_files": "podTestLibrary/Classes/CommonTools/**/*",
+      "public_header_files": "podTestLibrary/Classes/CommonTools/**/*.h",
+      "dependencies": {
+        "OpenUDID": [
+          "~> 1.0.0"
+        ]
+      }
+    },
+    {
+      "name": "RSKitAddition",
+      "source_files": "podTestLibrary/Classes/RSKitAddition/**/*",
+      "public_header_files": "podTestLibrary/Classes/RSKitAddition/**/*.h",
+      "dependencies": {
+        "podTestLibrary/Classes/CommonTools": [
+
+        ]
+      }
+    }
+  ]
 }
