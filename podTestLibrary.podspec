@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'podTestLibrary'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Testing Private Podspec.'
 
 # This description is used to generate tags and improve search results.
@@ -32,28 +32,33 @@ Testing Private Podspec, Testing Private Podspec.
 
   # s.source_files = 'podTestLibrary/Classes'
 
-  s.subspec 'NetWorkEngine'do|networkEngine|
-  networkEngine.source_files = 'podTestLibrary/Classes/NetworkEngine/**/*'
-  networkEngine.public_header_files = 'podTestLibrary/Classes/NetworkEngine/**/*.h'
-  # networkEngine.dependency 'AFNetworking', '~> 3.0'
+  s.subspec 'NetStatus' do |status|
+  status.source_files = 'podTestLibrary/Classes/NetStatus/**/*'
+  status.public_header_files = 'podTestLibrary/Classes/NetStatus/**/*.h'
   end
 
-  s.subspec 'DataModel'do|dataModel|
+  s.subspec 'NetWorkEngine' do |networkEngine|
+  networkEngine.source_files = 'podTestLibrary/Classes/NetworkEngine/**/*'
+  networkEngine.public_header_files = 'podTestLibrary/Classes/NetworkEngine/**/*.h'
+  networkEngine.dependency 'MJRefresh'
+  end
+
+  s.subspec 'DataModel' do |dataModel|
   dataModel.source_files = 'podTestLibrary/Classes/DataModel/**/*'
   dataModel.public_header_files = 'podTestLibrary/Classes/DataModel/**/*.h'
   end
 
-  s.subspec 'CommonTools'do|commonTools|
+  s.subspec 'CommonTools' do |commonTools|
   commonTools.source_files = 'podTestLibrary/Classes/CommonTools/**/*'
   commonTools.public_header_files = 'podTestLibrary/Classes/CommonTools/**/*.h'
-  # commonTools.dependency 'OpenUDID', '~> 1.0.0'
+  commonTools.dependency 'MBProgressHUD'
   end
 
-  # s.subspec 'RSKitAddition'do|ui|
-  # ui.source_files = 'podTestLibrary/Classes/RSKitAddition/**/*'
-  # ui.public_header_files = 'podTestLibrary/Classes/RSKitAddition/**/*.h'
-  # ui.dependency 'podTestLibrary/Classes/CommonTools'
-  # end
+  s.subspec 'RSKitAddition' do |ui|
+  ui.source_files = 'podTestLibrary/Classes/RSKitAddition/**/*'
+  ui.public_header_files = 'podTestLibrary/Classes/RSKitAddition/**/*.h'
+  ui.dependency 'podTestLibrary/CommonTools'
+  end
 
   s.frameworks = 'UIKit'
   #s.dependency 'AFNetworking', '~> 2.3'

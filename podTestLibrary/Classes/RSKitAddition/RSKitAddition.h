@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CommonTools.h"
 
 @interface RSKitAddition : NSObject
+
++ (void)dayin;
 
 @end

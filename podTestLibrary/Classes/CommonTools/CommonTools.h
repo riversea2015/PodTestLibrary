@@ -10,4 +10,6 @@
 
 @interface CommonTools : NSObject
 
++ (void)dayin;
+
 @end

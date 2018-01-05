@@ -9,7 +9,22 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - podTestLibrary (0.1.0)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.12)
+  - podTestLibrary (1.0.1):
+    - podTestLibrary/CommonTools (= 1.0.1)
+    - podTestLibrary/DataModel (= 1.0.1)
+    - podTestLibrary/NetStatus (= 1.0.1)
+    - podTestLibrary/NetWorkEngine (= 1.0.1)
+    - podTestLibrary/RSKitAddition (= 1.0.1)
+  - podTestLibrary/CommonTools (1.0.1):
+    - MBProgressHUD
+  - podTestLibrary/DataModel (1.0.1)
+  - podTestLibrary/NetStatus (1.0.1)
+  - podTestLibrary/NetWorkEngine (1.0.1):
+    - MJRefresh
+  - podTestLibrary/RSKitAddition (1.0.1):
+    - podTestLibrary/CommonTools
   - Specta (1.0.6)
 
 DEPENDENCIES:
@@ -27,9 +42,11 @@ SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Expecta+Snapshots: dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
-  podTestLibrary: 9c9c890737862c1bf52a9de2b4094838ec0a141b
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  podTestLibrary: fc3d415eb389af253575ef42393d2be4ca6c1e09
   Specta: f506f3a8361de16bc0dcf3b17b75e269072ba465
 
-PODFILE CHECKSUM: 2292eca37df997eb6d2233786c6775793544619c
+PODFILE CHECKSUM: 0c796fbde0b36217ef977641f5aab16156222573
 
 COCOAPODS: 1.2.1

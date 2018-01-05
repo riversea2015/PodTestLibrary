@@ -7,8 +7,13 @@
 //
 
 #import "RSKitAddition.h"
-#import "CommonTools.h"
 
 @implementation RSKitAddition
+
++ (void)dayin {
+    NSLog("%@", NSStringFromClass([self class]));
+    
+    [CommonTools dayin];
+}
 
 @end
