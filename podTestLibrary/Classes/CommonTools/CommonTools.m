@@ -11,7 +11,7 @@
 @implementation CommonTools
 
 + (void)dayin {
-    NSLog("%@", NSStringFromClass([self class]));
+    NSLog(@"%@", NSStringFromClass([self class]));
 }
 
 @end
