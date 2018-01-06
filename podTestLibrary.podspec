@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'podTestLibrary'
-  s.version          = '1.0.1'
+  s.version          = '1.0.4'
   s.summary          = 'Testing Private Podspec.'
 
 # This description is used to generate tags and improve search results.
@@ -35,7 +35,7 @@ Testing Private Podspec, Testing Private Podspec.
   s.subspec 'NetWorkEngine'do|networkEngine|
   networkEngine.source_files = 'podTestLibrary/Classes/NetworkEngine/**/*'
   networkEngine.public_header_files = 'podTestLibrary/Classes/NetworkEngine/**/*.h'
-  # networkEngine.dependency 'AFNetworking', '~> 3.0'
+  networkEngine.dependency 'MBProgressHUD'
   end
 
   s.subspec 'DataModel'do|dataModel|
@@ -46,17 +46,20 @@ Testing Private Podspec, Testing Private Podspec.
   s.subspec 'CommonTools'do|commonTools|
   commonTools.source_files = 'podTestLibrary/Classes/CommonTools/**/*'
   commonTools.public_header_files = 'podTestLibrary/Classes/CommonTools/**/*.h'
-  # commonTools.dependency 'OpenUDID', '~> 1.0.0'
   end
 
-  # s.subspec 'RSKitAddition'do|ui|
-  # ui.source_files = 'podTestLibrary/Classes/RSKitAddition/**/*'
-  # ui.public_header_files = 'podTestLibrary/Classes/RSKitAddition/**/*.h'
-  # ui.dependency 'podTestLibrary/Classes/CommonTools'
-  # end
+  s.subspec 'RSKitAddition'do|ui|
+  ui.source_files = 'podTestLibrary/Classes/RSKitAddition/**/*'
+  ui.public_header_files = 'podTestLibrary/Classes/RSKitAddition/**/*.h'
+  ui.dependency 'podTestLibrary/CommonTools'
+  end
+
+  s.subspec 'RSImageGenerator'do|generator|
+  generator.source_files = 'podTestLibrary/Classes/RSImageGenerator/**/*'
+  generator.public_header_files = 'podTestLibrary/Classes/RSImageGenerator/**/*.h'
+  generator.dependency 'podTestLibrary/CommonTools'
+  end
 
   s.frameworks = 'UIKit'
-  #s.dependency 'AFNetworking', '~> 2.3'
-  #s.dependency 'OpenUDID', '~> 1.0.0'
 
 end
